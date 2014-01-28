@@ -1,4 +1,5 @@
 YarnMatch::Application.routes.draw do
+  resources :yarns
   authenticated :user do
     root :to => 'home#index'
   end

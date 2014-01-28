@@ -20,3 +20,6 @@
             %a.button{"data-dropdown" => "role-drop-#{user.id}"} Change role
             = render user
           %td= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user
+.span8
+  .create_link
+    = link_to("Create User", new_user_path)

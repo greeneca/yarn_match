@@ -1,0 +1,31 @@
+= simple_form_for(@yarn) do |f|
+  = f.error_notification
+
+  .form-inputs
+    .row
+      .columns.large-3
+        = f.input :brand
+      .columns.large-3
+        = f.input :name
+      .columns.large-6
+    .row
+      .columns.large-3
+        = f.input :cyc_weight, as: :integer
+    .row
+      .columns.large-3
+        = f.input :name_weight
+    .row
+      .columns.large-3
+        = f.input :ply_weight, as: :integer
+    .row
+      .columns.large-3
+        = f.input :wpi_weight, as: :integer
+    .row
+      .columns.large-3
+        = f.input :knit_weight, as: :integer
+
+  .form-actions
+    .row
+      .columns.large-3
+        = f.button :submit
+      .columns.large-9

@@ -1,0 +1,31 @@
+%h1 Listing yarns
+
+%table
+  %tr
+    %th Brand
+    %th Name
+    %th Cyc weight
+    %th Name weight
+    %th Ply weight
+    %th Wpi weight
+    %th Knit weight
+    %th
+    %th
+    %th
+
+  - @yarns.each do |yarn|
+    %tr
+      %td= yarn.brand
+      %td= yarn.name
+      %td= yarn.cyc_weight
+      %td= yarn.name_weight
+      %td= yarn.ply_weight
+      %td= yarn.wpi_weight
+      %td= yarn.knit_weight
+      %td= link_to 'Show', yarn
+      %td= link_to 'Edit', edit_yarn_path(yarn)
+      %td= link_to 'Destroy', yarn, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Yarn', new_yarn_path

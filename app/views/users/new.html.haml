@@ -1,0 +1,9 @@
+%h2 Sign up
+= simple_form_for(@user, :url => users_path, :html => {:class => 'form-vertical' }) do |f|
+  = f.error_notification
+  = display_base_errors @user
+  = f.input :name, :autofocus => true
+  = f.input :email, :required => true
+  = f.input :password, :required => true
+  = f.input :password_confirmation, :required => true
+  = f.button :submit, 'Create', :class => 'btn-primary'

@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Brand:
+  = @yarn.brand
+%p
+  %b Name:
+  = @yarn.name
+%p
+  %b Cyc weight:
+  = @yarn.cyc_weight
+%p
+  %b Name weight:
+  = @yarn.name_weight
+%p
+  %b Ply weight:
+  = @yarn.ply_weight
+%p
+  %b Wpi weight:
+  = @yarn.wpi_weight
+%p
+  %b Knit weight:
+  = @yarn.knit_weight
+
+= link_to 'Edit', edit_yarn_path(@yarn)
+\|
+= link_to 'Back', yarns_path

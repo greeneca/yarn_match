@@ -4,7 +4,7 @@
       .large-12.columns
         %h3 Change Role
     .row
-      = f.input :roles, :collection => Role.all, :as => :radio_buttons, :label_method => lambda {|t| t.name.titleize}, :label => false, checked: user.role_ids.first, wrapper_html: {class: 'large-12 columns'}
+      = f.input :role_ids, :collection => Role.all, :as => :radio_buttons, :label_method => lambda {|t| t.name.titleize}, :label => false, checked: user.role_ids.first, wrapper_html: {class: 'large-12 columns'}
     .row
       .large-12.columns
         = f.submit "Change Role", :class => "button"
