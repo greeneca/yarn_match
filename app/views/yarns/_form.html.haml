@@ -10,16 +10,16 @@
       .columns.large-6
     .row
       .columns.large-3
-        = f.input :cyc_weight, as: :integer
+        = f.input :cyc_weight, as: :integer, label: 'Craft Yarn Council Weight'
     .row
       .columns.large-3
-        = f.input :name_weight
+        = f.input :name_weight, as: :select, collection: Yarn.name_weights
     .row
       .columns.large-3
         = f.input :ply_weight, as: :integer
     .row
       .columns.large-3
-        = f.input :wpi_weight, as: :integer
+        = f.input :wpi_weight, as: :integer, label: 'Wraps Per Inch Weigth'
     .row
       .columns.large-3
         = f.input :knit_weight, as: :integer
